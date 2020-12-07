@@ -1,0 +1,26 @@
+// Fire Alam Code
+
+int buzzerpin = 13;
+int ledpin = 12;
+int value = 0;
+int state;
+
+void setup(){
+
+  pinMode(buzzerpin,OUTPUT);
+  pinMode(ledpin,OUTPUT);
+  Serial.begin(9600);
+  }
+  
+  void loop(){
+    
+    state = digitalRead(11);
+    if(state==HIGH){
+      digitalWrite(buzzerpin,HIGH);
+      digitalWrite(ledpin,HIGH);
+    }
+    else{
+      digitalWrite(buzzerpin,LOW);
+      digitalWrite(ledpin,LOW);   
+    } 
+    }
