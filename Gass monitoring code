@@ -1,0 +1,28 @@
+// Gass Monitoring Code
+
+int buzzerpin = 13;
+int ledpin = 12;
+int gassvalue = 150;
+int gass;
+
+ void setup(){
+  
+  pinMode(buzzerpin,HIGH);
+  pinMode(ledpin,HIGH);
+  Serial.begin(9600);
+  
+  }
+  void loop(){
+    
+    gass = analogRead(A0);
+    if(gassvalue>=150){
+      digitalWrite(buzzerpin,HIGH);
+      digitalWrite(ledpin,HIGH);
+      Serial.print("gass");
+    }
+   else{
+
+     digitalWrite(buzzerpin,LOW);
+     digitalWrite(ledpin,LOW);
+   } 
+    }
